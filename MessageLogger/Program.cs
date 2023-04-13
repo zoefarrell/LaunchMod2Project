@@ -63,13 +63,14 @@ while (userInput.ToLower() != "quit")
                 user = existingUser;
             }
         }
+        
         if (user is null)
         {
             Console.WriteLine("could not find user");
             userInput = "quit";
         }
+        
         Console.Write("Add a message: ");
-
         userInput = Console.ReadLine();
     }
 
