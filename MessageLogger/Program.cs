@@ -21,7 +21,7 @@ List<User> users = new List<User>() { user };
 
 while (userInput.ToLower() != "quit")
 {
-    while (userInput.ToLower() != "log out")
+    while (userInput.ToLower() != "log out" && userInput.ToLower() != "quit")
     {
         user.Messages.Add(new Message(userInput));
 
@@ -49,7 +49,6 @@ while (userInput.ToLower() != "quit")
         Console.Write("Add a message: ");
 
         userInput = Console.ReadLine();
-
     }
     else if (userInput.ToLower() == "existing")
     {
@@ -63,7 +62,7 @@ while (userInput.ToLower() != "quit")
                 user = existingUser;
             }
         }
-        
+
         if (user != null)
         {
             Console.Write("Add a message: ");
@@ -73,10 +72,8 @@ while (userInput.ToLower() != "quit")
         {
             Console.WriteLine("could not find user");
             userInput = "quit";
-
         }
     }
-
 }
 
 Console.WriteLine("Thanks for using Message Logger!");
