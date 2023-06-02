@@ -15,7 +15,7 @@ namespace MessageLogger
         public Message(string content)
         {
             Content = content;
-            CreatedAt = DateTime.Now;
+            CreatedAt = DateTime.Now.ToUniversalTime();
         }
     }
 }
